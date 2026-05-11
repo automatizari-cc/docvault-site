@@ -98,9 +98,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (!verifyJson.success) return bad("Verification failed");
 
   // Send via Resend
-  const subject = `[Pilot request] ${company} — ${usecase}`;
+  const subject = `[Service request] ${company} — ${usecase}`;
   const body =
-    `New pilot request from the landing page.\n\n` +
+    `New service request from the landing page.\n\n` +
     `Name:     ${name}\n` +
     `Company:  ${company}\n` +
     `Email:    ${email}\n` +

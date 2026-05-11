@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>DocVault — Sovereign AI for your company's documents</title>
-<meta name="description" content="Private, air-gapped AI for your company's documents. Dedicated infrastructure per client. Flat-fee, no per-query costs. Built in Northeast Ohio." />
+<title>DocVault — On-Demand IT Services · Northeast Ohio · Remote Nationwide</title>
+<meta name="description" content="Enterprise-level IT support, networking, and security services on demand. Onsite Cleveland, Akron, Canton; remote nationwide. CISSP, CCNA, CompTIA Security+/Network+/A+." />
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
   :root {
@@ -50,20 +50,22 @@
   .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background: var(--accent-glow); border: 1px solid rgba(110, 168, 255, 0.25); border-radius: 20px; font-size: 12px; color: var(--accent); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px; }
   .eyebrow .dot { width: 6px; height: 6px; background: var(--ok); border-radius: 50%; }
 
-  .hero { max-width: 1200px; margin: 0 auto; padding: 50px 32px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .hero { max-width: 880px; margin: 0 auto; padding: 60px 32px 90px; text-align: center; }
   .hero h1 { font-size: 52px; font-weight: 700; line-height: 1.1; letter-spacing: -1.5px; margin: 0 0 20px 0; }
   .hero h1 .accent { color: var(--accent); display: block; }
-  .hero .sub { font-size: 18px; color: var(--muted); line-height: 1.6; margin: 0 0 32px 0; max-width: 520px; }
-  .hero .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
-  .hero-meta { font-size: 13px; color: var(--muted); display: flex; gap: 20px; flex-wrap: wrap; }
+  .hero .sub { font-size: 18px; color: var(--muted); line-height: 1.6; margin: 0 auto 32px auto; max-width: 640px; }
+  .hero .cta-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 28px; }
+  .hero-meta { font-size: 13px; color: var(--muted); display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
   .hero-meta span { display: flex; align-items: center; gap: 6px; }
   .hero-meta .check { color: var(--ok); font-weight: 700; }
-  .hero-art { width: 100%; height: auto; display: block; }
 
   section { padding: 80px 32px; }
   .container { max-width: 1200px; margin: 0 auto; }
   h2.section-title { font-size: 36px; font-weight: 700; letter-spacing: -1px; margin: 0 0 16px 0; text-align: center; }
   .section-sub { color: var(--muted); text-align: center; max-width: 640px; margin: 0 auto 56px auto; font-size: 17px; }
+
+  .cert-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .cert-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--accent-glow); border: 1px solid rgba(110, 168, 255, 0.25); border-radius: 16px; font-size: 13px; color: var(--accent); font-weight: 600; letter-spacing: 0.3px; }
 
   .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .compare-col { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
@@ -74,9 +76,8 @@
   .compare-col ul { list-style: none; padding: 0; margin: 0; }
   .compare-col li { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; display: flex; align-items: flex-start; gap: 10px; line-height: 1.55; }
   .compare-col li:last-child { border-bottom: none; }
-  .compare-col .mark { flex-shrink: 0; font-weight: 700; width: 16px; text-align: center; }
+  .compare-col .mark { flex-shrink: 0; font-weight: 700; width: 16px; text-align: center; color: var(--muted); }
   .compare-col.vault .mark { color: var(--ok); }
-  .compare-col.town .mark { color: var(--danger); }
 
   .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .feature { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 0.15s ease, transform 0.15s ease; }
@@ -91,22 +92,11 @@
   .persona h3 { font-size: 18px; font-weight: 600; margin: 0 0 10px 0; }
   .persona p { color: var(--muted); font-size: 14px; margin: 0; line-height: 1.65; }
 
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .step { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
   .step .num { display: inline-block; font-size: 13px; font-weight: 700; color: var(--accent); background: var(--accent-glow); padding: 4px 10px; border-radius: 12px; margin-bottom: 14px; letter-spacing: 1px; }
   .step h3 { font-size: 18px; font-weight: 600; margin: 0 0 10px 0; }
   .step p { color: var(--muted); font-size: 14px; margin: 0; line-height: 1.65; }
-
-  .pricing { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-  .pricing h2 { font-size: 32px; margin: 0 0 16px 0; letter-spacing: -0.5px; }
-  .pricing p { color: var(--muted); margin: 0 0 20px 0; }
-  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .price-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; }
-  .price-card.vault { border-color: var(--accent); }
-  .price-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; margin-bottom: 8px; color: var(--muted); }
-  .price-card.vault .label { color: var(--accent); }
-  .price-card .amount { font-size: 22px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.5px; }
-  .price-card .note { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
   .security { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
   .security h2 { font-size: 32px; margin: 0 0 16px 0; letter-spacing: -0.5px; }
@@ -149,21 +139,21 @@
   .pilot-form button { justify-self: start; }
   @media (max-width: 640px) { .pilot-form .row { grid-template-columns: 1fr; } }
 
-
   @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; padding: 30px 20px 60px; gap: 40px; text-align: center; }
-    .hero .sub { margin-left: auto; margin-right: auto; }
-    .hero .cta-row, .hero-meta { justify-content: center; }
+    .hero { padding: 30px 20px 60px; }
     .hero h1 { font-size: 38px; }
     section { padding: 60px 20px; }
     h2.section-title { font-size: 28px; }
-    .features, .steps, .personas, .compare { grid-template-columns: 1fr; }
-    .pricing, .security { grid-template-columns: 1fr; padding: 28px; }
-    .pricing h2, .security h2 { font-size: 24px; }
-    .pricing-grid { grid-template-columns: 1fr; }
+    .features, .personas, .compare { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .security { grid-template-columns: 1fr; padding: 28px; }
+    .security h2 { font-size: 24px; }
     .final-cta h2 { font-size: 30px; }
     nav { padding: 16px 20px; }
     .eyebrow { margin-left: auto; margin-right: auto; }
+  }
+  @media (max-width: 600px) {
+    .steps { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -171,352 +161,273 @@
 
 <nav>
   <div class="logo">DocVault</div>
-  <a href="/app" class="btn ghost">Sign in</a>
+  <a href="#contact" class="btn ghost">Request service</a>
 </nav>
 
 <div class="hero">
-  <div>
-    <div class="eyebrow"><span class="dot"></span> BUILT IN NORTHEAST OHIO</div>
-    <h1>
-      Sovereign AI for your
-      <span class="accent">company's documents.</span>
-    </h1>
-    <p class="sub">
-      The Town Square is for general tasks. The Vault is for your trade secrets. DocVault runs entirely on infrastructure dedicated to your business — your documents never train someone else's model, never leave your stack, and never generate a per-query bill.
-    </p>
-    <div class="cta-row">
-      <a href="#pilot" class="btn lg">Start a pilot</a>
-      <a href="/app" class="btn ghost lg">Sign in</a>
-    </div>
-    <div class="hero-meta">
-      <span><span class="check">✓</span> Dedicated GPU per client</span>
-      <span><span class="check">✓</span> Zero third-party API calls</span>
-      <span><span class="check">✓</span> Flat monthly fee</span>
-    </div>
+  <div class="eyebrow"><span class="dot"></span> NORTHEAST OHIO · REMOTE NATIONWIDE</div>
+  <h1>
+    Enterprise-Level IT Support,
+    <span class="accent">Networking, and Security — On Demand.</span>
+  </h1>
+  <p class="sub">
+    Fast, reliable onsite and remote technical services for small businesses, branch offices, and enterprise environments.
+  </p>
+  <div class="cta-row">
+    <a href="#contact" class="btn lg">Request Service</a>
+    <a href="#contact" class="btn ghost lg">Schedule a Consultation</a>
+    <a href="#contact" class="btn ghost lg">Emergency Support</a>
   </div>
-  <div>
-    <svg class="hero-art" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Documents entering a secure vault and emerging as a cited answer">
-      <defs>
-        <radialGradient id="vGlow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0%" stop-color="#6ea8ff" stop-opacity="0.35"/>
-          <stop offset="70%" stop-color="#6ea8ff" stop-opacity="0.08"/>
-          <stop offset="100%" stop-color="#6ea8ff" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="vFace" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#1a1f2a"/>
-          <stop offset="100%" stop-color="#0f1420"/>
-        </linearGradient>
-        <linearGradient id="vInner" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#141821"/>
-          <stop offset="100%" stop-color="#0a0d13"/>
-        </linearGradient>
-        <linearGradient id="ansGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#6ea8ff"/>
-          <stop offset="100%" stop-color="#4f8df0"/>
-        </linearGradient>
-        <filter id="softSh" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
-          <feOffset dx="0" dy="4" result="ob"/>
-          <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
-          <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id="accGlow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="6" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <clipPath id="vClip"><circle cx="340" cy="240" r="130"/></clipPath>
-        <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#6ea8ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-      </defs>
-
-      <circle cx="340" cy="240" r="220" fill="url(#vGlow)"/>
-
-      <g transform="translate(40, 180)" filter="url(#softSh)">
-        <rect x="24" y="24" width="120" height="150" rx="8" fill="#141821" stroke="#232938"/>
-        <rect x="12" y="12" width="120" height="150" rx="8" fill="#1a1f2a" stroke="#232938"/>
-        <rect x="0" y="0" width="120" height="150" rx="8" fill="#1c2130" stroke="#2f3648"/>
-        <rect x="14" y="16" width="40" height="6" rx="2" fill="#6ea8ff"/>
-        <g fill="#7a8499" opacity="0.7">
-          <rect x="14" y="34" width="92" height="3" rx="1.5"/>
-          <rect x="14" y="44" width="84" height="3" rx="1.5"/>
-          <rect x="14" y="54" width="92" height="3" rx="1.5"/>
-          <rect x="14" y="64" width="66" height="3" rx="1.5"/>
-          <rect x="14" y="82" width="92" height="3" rx="1.5"/>
-          <rect x="14" y="92" width="78" height="3" rx="1.5"/>
-          <rect x="14" y="102" width="92" height="3" rx="1.5"/>
-          <rect x="14" y="112" width="58" height="3" rx="1.5"/>
-          <rect x="14" y="130" width="92" height="3" rx="1.5"/>
-        </g>
-      </g>
-
-      <path d="M 200 250 Q 220 240 230 240" fill="none" stroke="#6ea8ff" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arr)" opacity="0.7"/>
-
-      <circle cx="340" cy="240" r="160" fill="none" stroke="#232938" stroke-width="1" stroke-dasharray="4 8"/>
-      <circle cx="340" cy="240" r="148" fill="#141821" stroke="#2f3648"/>
-      <circle cx="340" cy="240" r="140" fill="url(#vFace)" stroke="#232938" filter="url(#softSh)"/>
-      <circle cx="340" cy="240" r="132" fill="none" stroke="#2f3648"/>
-      <circle cx="340" cy="240" r="130" fill="url(#vInner)"/>
-
-      <g fill="#2f3648">
-        <circle cx="340" cy="110" r="3"/><circle cx="432" cy="148" r="3"/>
-        <circle cx="470" cy="240" r="3"/><circle cx="432" cy="332" r="3"/>
-        <circle cx="340" cy="370" r="3"/><circle cx="248" cy="332" r="3"/>
-        <circle cx="210" cy="240" r="3"/><circle cx="248" cy="148" r="3"/>
-      </g>
-
-      <g stroke="#6ea8ff" stroke-width="2" stroke-linecap="round" filter="url(#accGlow)">
-        <line x1="340" y1="165" x2="340" y2="185"/>
-        <line x1="340" y1="295" x2="340" y2="315"/>
-        <line x1="235" y1="240" x2="255" y2="240"/>
-        <line x1="425" y1="240" x2="445" y2="240"/>
-      </g>
-
-      <g clip-path="url(#vClip)">
-        <g transform="translate(285, 180)" filter="url(#softSh)">
-          <rect x="0" y="0" width="90" height="120" rx="6" fill="#1c2130" stroke="#6ea8ff" opacity="0.95"/>
-          <rect x="10" y="14" width="32" height="5" rx="2" fill="#6ea8ff"/>
-          <g fill="#7a8499" opacity="0.8">
-            <rect x="10" y="30" width="70" height="2.5" rx="1.2"/>
-            <rect x="10" y="38" width="60" height="2.5" rx="1.2"/>
-            <rect x="10" y="46" width="70" height="2.5" rx="1.2"/>
-            <rect x="10" y="54" width="54" height="2.5" rx="1.2"/>
-            <rect x="10" y="68" width="70" height="2.5" rx="1.2"/>
-            <rect x="10" y="76" width="62" height="2.5" rx="1.2"/>
-            <rect x="10" y="84" width="70" height="2.5" rx="1.2"/>
-            <rect x="10" y="92" width="48" height="2.5" rx="1.2"/>
-          </g>
-        </g>
-        <g transform="translate(385, 180)" filter="url(#accGlow)">
-          <circle cx="0" cy="0" r="16" fill="#6ea8ff"/>
-          <g stroke="#0a0d13" stroke-width="2" stroke-linecap="round">
-            <line x1="0" y1="-7" x2="0" y2="7"/><line x1="-7" y1="0" x2="7" y2="0"/>
-            <line x1="-5" y1="-5" x2="5" y2="5"/><line x1="5" y1="-5" x2="-5" y2="5"/>
-          </g>
-        </g>
-      </g>
-
-      <g transform="translate(340, 345)">
-        <path d="M 0 -14 L 18 -8 L 18 6 Q 18 18 0 26 Q -18 18 -18 6 L -18 -8 Z" fill="#0a0d13" stroke="#6ea8ff" stroke-width="2"/>
-        <path d="M -6 3 L -1 8 L 8 -3" fill="none" stroke="#6ea8ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-
-      <path d="M 450 230 Q 475 215 490 210" fill="none" stroke="#6ea8ff" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arr)" opacity="0.7"/>
-
-      <g transform="translate(500, 140)" filter="url(#softSh)">
-        <rect x="30" y="0" width="140" height="44" rx="8" fill="#141821" stroke="#232938"/>
-        <g fill="#7a8499" opacity="0.7">
-          <rect x="42" y="14" width="90" height="4" rx="2"/>
-          <rect x="42" y="24" width="110" height="4" rx="2"/>
-          <rect x="42" y="34" width="70" height="4" rx="2"/>
-        </g>
-        <rect x="0" y="60" width="170" height="120" rx="8" fill="url(#ansGrad)"/>
-        <g fill="#0a0d13" opacity="0.85">
-          <rect x="14" y="76" width="140" height="4" rx="2"/>
-          <rect x="14" y="86" width="130" height="4" rx="2"/>
-          <rect x="14" y="96" width="140" height="4" rx="2"/>
-          <rect x="14" y="106" width="112" height="4" rx="2"/>
-          <rect x="14" y="122" width="140" height="4" rx="2"/>
-          <rect x="14" y="132" width="100" height="4" rx="2"/>
-        </g>
-        <g transform="translate(14, 148)">
-          <rect x="0" y="0" width="100" height="22" rx="11" fill="#0a0d13" opacity="0.35"/>
-          <circle cx="12" cy="11" r="3" fill="#4ade80"/>
-          <text x="22" y="15" font-family="-apple-system, system-ui, sans-serif" font-size="10" fill="#0a0d13" font-weight="600">Source: SOP §4.2</text>
-        </g>
-      </g>
-    </svg>
+  <div class="hero-meta">
+    <span><span class="check">✓</span> Networking</span>
+    <span><span class="check">✓</span> Cybersecurity</span>
+    <span><span class="check">✓</span> Infrastructure</span>
+    <span><span class="check">✓</span> Field Engineering</span>
   </div>
 </div>
 
+<!-- Professional Summary -->
 <section>
   <div class="container">
-    <h2 class="section-title">The Vault vs. the Town Square</h2>
-    <p class="section-sub">Public AI tools are the Town Square — fine for brainstorming, risky for anything proprietary. DocVault is the Vault: built for the documents your business actually runs on.</p>
-    <div class="compare">
-      <div class="compare-col vault">
-        <h3>DocVault</h3>
-        <h4>The Vault</h4>
-        <ul>
-          <li><span class="mark">✓</span> Air-gapped infrastructure dedicated to your company alone</li>
-          <li><span class="mark">✓</span> Your documents never train anyone else's model</li>
-          <li><span class="mark">✓</span> Flat monthly fee — predictable as rent</li>
-          <li><span class="mark">✓</span> Self-hosted AI, no OpenAI or Anthropic in the loop</li>
-          <li><span class="mark">✓</span> Answers cite the exact document and section</li>
-          <li><span class="mark">✓</span> Zero vendor lock-in on pricing or policy changes</li>
-        </ul>
-      </div>
-      <div class="compare-col town">
-        <h3>Public AI tools</h3>
-        <h4>The Town Square</h4>
-        <ul>
-          <li><span class="mark">✕</span> Multi-tenant cloud shared with everyone else</li>
-          <li><span class="mark">✕</span> Your prompts may become training data</li>
-          <li><span class="mark">✕</span> Per-query pricing that climbs with usage</li>
-          <li><span class="mark">✕</span> Third-party API you don't control</li>
-          <li><span class="mark">✕</span> Hallucinations from general internet knowledge</li>
-          <li><span class="mark">✕</span> Policy changes and price hikes at vendor's whim</li>
-        </ul>
-      </div>
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="section-sub">
+      Cybersecurity analyst and infrastructure engineer with industry-recognized certifications and hands-on experience in enterprise networking, vulnerability management, incident response, and field engineering. Practical technical support for organizations that need experienced help without hiring full-time staff.
+    </p>
+    <div class="cert-row">
+      <span class="cert-pill">CISSP</span>
+      <span class="cert-pill">CCNA</span>
+      <span class="cert-pill">CompTIA Security+</span>
+      <span class="cert-pill">CompTIA Network+</span>
+      <span class="cert-pill">CompTIA A+</span>
     </div>
   </div>
 </section>
 
+<!-- Core Services -->
 <section>
   <div class="container">
-    <h2 class="section-title">What you actually get</h2>
-    <p class="section-sub">Not a ChatGPT wrapper. A private knowledge base running on infrastructure that belongs to your business.</p>
+    <h2 class="section-title">Core Services</h2>
+    <p class="section-sub">From a single quick fix to multi-site infrastructure projects.</p>
     <div class="features">
       <div class="feature">
         <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="6" rx="1"/><rect x="2" y="15" width="20" height="6" rx="1"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
         </div>
-        <h3>Your own stack, top to bottom</h3>
-        <p>One dedicated VPS and one dedicated GPU per client. Your data never touches another company's infrastructure, period.</p>
+        <h3>Network Design &amp; Troubleshooting</h3>
+        <p>Router and switch configuration, VLAN segmentation, DHCP/DNS/NAT troubleshooting, VPN deployment, firewall configuration. Cisco Meraki, Cisco IOS, pfSense.</p>
       </div>
       <div class="feature">
         <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="9" y1="13" x2="15" y2="13"/>
-            <line x1="9" y1="17" x2="15" y2="17"/>
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
         </div>
-        <h3>Every answer cites its source</h3>
-        <p>No hallucinations on your policies. Every response points to the exact document and section it came from — click through to verify.</p>
+        <h3>Wireless &amp; Access Points</h3>
+        <p>Wi-Fi troubleshooting, AP installation and replacement, SSID and security configuration, coverage and performance optimization, WPA2/WPA3 implementation.</p>
       </div>
       <div class="feature">
         <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
         </div>
-        <h3>Fast enough to replace "ask Karen"</h3>
-        <p>Semantic search across your entire library in milliseconds. Your team stops interrupting each other for answers that are already in the docs.</p>
+        <h3>Cybersecurity</h3>
+        <p>Vulnerability assessments with Nessus, security hardening, risk assessments, firewall and access-control reviews, incident response assistance, security policy recommendations.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Systems Administration</h3>
+        <p>Windows Server, Active Directory and Group Policy, Microsoft 365 support, Linux administration, patch management, backup and recovery validation.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <h3>Virtualization &amp; Infrastructure</h3>
+        <p>VMware and VirtualBox support, server deployment, firmware updates, rack-and-stack services, infrastructure documentation.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Field Services</h3>
+        <p>Workstation refresh projects, smart-hands support, hardware installation and replacement, cable management, device imaging and deployment, break/fix support.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Industries Served -->
 <section>
   <div class="container">
-    <h2 class="section-title">Who this is for</h2>
-    <p class="section-sub">Any company where sending internal docs to a public AI is a non-starter — legally, competitively, or both.</p>
+    <h2 class="section-title">Industries Served</h2>
+    <p class="section-sub">Practical experience across regulated and non-regulated environments.</p>
     <div class="personas">
       <div class="persona">
-        <span class="tag">REGULATED</span>
-        <h3>HIPAA, SOX, GDPR</h3>
-        <p>Healthcare, finance, legal — any business where compliance requires knowing exactly where your data lives and who touches it.</p>
+        <span class="tag">FINANCE</span>
+        <h3>Financial institutions</h3>
+        <p>Branch IT, workstation refresh, vulnerability remediation, audit-driven security work.</p>
       </div>
       <div class="persona">
-        <span class="tag">IP-HEAVY</span>
-        <h3>Trade secrets matter</h3>
-        <p>Manufacturing blueprints, M&amp;A strategy, proprietary processes, product roadmaps. Things no one should train a public model on.</p>
+        <span class="tag">HEALTHCARE</span>
+        <h3>Healthcare practices</h3>
+        <p>HIPAA-aware network and endpoint hygiene, secure remote access, patch discipline.</p>
       </div>
       <div class="persona">
-        <span class="tag">PUBLIC SECTOR</span>
-        <h3>Government &amp; contractors</h3>
-        <p>Agencies bound by policies like Ohio's IT-17 that prohibit public GenAI on non-public data. DocVault is the "isolated solution" that rule requires.</p>
+        <span class="tag">PROFESSIONAL</span>
+        <h3>Professional services firms</h3>
+        <p>Reliable infrastructure for law, accounting, and consulting firms billing by the hour.</p>
+      </div>
+      <div class="persona">
+        <span class="tag">RETAIL</span>
+        <h3>Retail and hospitality</h3>
+        <p>POS networking, guest Wi-Fi segmentation, store rollouts, smart-hands escalations.</p>
+      </div>
+      <div class="persona">
+        <span class="tag">MANUFACTURING</span>
+        <h3>Manufacturing</h3>
+        <p>Plant-floor networking, OT/IT segmentation, asset onboarding, vendor coordination.</p>
+      </div>
+      <div class="persona">
+        <span class="tag">MSP</span>
+        <h3>Managed Service Providers</h3>
+        <p>Subcontractor and overflow capacity: vulnerability scans, refresh projects, site visits.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Why Work With Me -->
 <section>
   <div class="container">
-    <div class="pricing">
-      <div>
-        <h2>Predictable pricing. No per-query surprise.</h2>
-        <p>Public AI tools charge by the token. The more useful it is, the more it costs you. DocVault flips that: your monthly fee covers a dedicated GPU, and your team can use it as hard as they want. Heavy users pay the same as light users.</p>
-        <a href="#pilot" class="btn">Get a quote</a>
-      </div>
-      <div class="pricing-grid">
-        <div class="price-card vault">
-          <div class="label">DocVault</div>
-          <div class="amount">Flat monthly fee</div>
-          <div class="note">One dedicated stack, unlimited questions, unlimited users within your company. Hardware-backed — costs get more predictable over time, not less.</div>
-        </div>
-        <div class="price-card">
-          <div class="label">Cloud AI</div>
-          <div class="amount">Per query &amp; per seat</div>
-          <div class="note">Costs scale with usage. Heavy document analysis can run $7,500 to $50,000+ per project, plus recurring per-user seats.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="how">
-  <div class="container">
-    <h2 class="section-title">How it works</h2>
-    <p class="section-sub">From a folder of PDFs to a team that can actually find what it needs — usually inside a week.</p>
+    <h2 class="section-title">Why Work With Me</h2>
+    <p class="section-sub">Four constants across every engagement.</p>
     <div class="steps">
       <div class="step">
-        <span class="num">STEP 01</span>
-        <h3>Upload your documents</h3>
-        <p>SOPs, contracts, policies, handbooks, meeting notes. DocVault scans each file, indexes it, and builds your private knowledge base.</p>
+        <span class="num">CREDENTIALS</span>
+        <h3>Enterprise certifications</h3>
+        <p>CISSP, CCNA, and CompTIA Security+/Network+/A+. Cybersecurity, networking, and systems administration — verified, not improvised.</p>
       </div>
       <div class="step">
-        <span class="num">STEP 02</span>
-        <h3>Ask in plain English</h3>
-        <p>No training, no query syntax, no prompt engineering. "What's our escalation procedure for a Tier-2 vendor incident?" Done.</p>
+        <span class="num">SECURITY-FIRST</span>
+        <h3>Risk-aware decisions</h3>
+        <p>Every deployment and configuration is evaluated from a risk and compliance perspective, not just "does it work."</p>
       </div>
       <div class="step">
-        <span class="num">STEP 03</span>
-        <h3>Answers with receipts</h3>
-        <p>DocVault answers from your actual documents and cites the exact source. If the answer isn't in your docs, it says so instead of making something up.</p>
+        <span class="num">BUSINESS-FOCUSED</span>
+        <h3>Aligned with uptime</h3>
+        <p>Technical work is shaped by uptime, reliability, and operational efficiency — not by what's most fun to build.</p>
+      </div>
+      <div class="step">
+        <span class="num">FLEXIBLE</span>
+        <h3>One-time or recurring</h3>
+        <p>Available for one-time projects, recurring maintenance, and emergency support. No retainer required.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Sample Projects -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Sample Projects</h2>
+    <p class="section-sub">Representative work from recent engagements.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="num">PROJECT</span>
+        <h3>Branch Office Network Deployment</h3>
+        <p>Configured routers, switches, wireless access points, and secure VPN connectivity for distributed office environments.</p>
+      </div>
+      <div class="step">
+        <span class="num">PROJECT</span>
+        <h3>Vulnerability Assessment Program</h3>
+        <p>Performed enterprise vulnerability scanning and prioritized remediation efforts using Nessus.</p>
+      </div>
+      <div class="step">
+        <span class="num">PROJECT</span>
+        <h3>Workstation Refresh</h3>
+        <p>Completed multi-site hardware replacement and deployment projects for financial institutions.</p>
+      </div>
+      <div class="step">
+        <span class="num">PROJECT</span>
+        <h3>Incident Response Support</h3>
+        <p>Investigated alerts, performed triage, and supported containment and remediation activities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
 <section>
   <div class="container">
     <div class="security">
       <div>
-        <h2>Your documents stay yours</h2>
-        <p>DocVault was built for companies that can't hand their internal documents to a third-party AI. Every piece of the stack is isolated, private, and under your control.</p>
-        <a href="/app" class="btn">Sign in</a>
+        <h2>Certifications</h2>
+        <p>Industry-recognized credentials backing the work — not just labels on a resume.</p>
       </div>
-      <div>
+      <ul>
+        <li><span class="check">✓</span> CISSP — ISC²</li>
+        <li><span class="check">✓</span> CCNA — Cisco</li>
+        <li><span class="check">✓</span> CompTIA Security+</li>
+        <li><span class="check">✓</span> CompTIA Network+</li>
+        <li><span class="check">✓</span> CompTIA A+</li>
+        <li><span class="check">✓</span> IBM AI Product Manager Professional Certificate</li>
+        <li><span class="check">✓</span> IBM AI Project Manager Professional Certificate</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Service Areas -->
+<section>
+  <div class="container">
+    <div class="local-strip">
+      <div class="flag">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="content">
+        <h3>Service Areas</h3>
+        <p><strong style="color: var(--text);">Onsite:</strong> Cleveland · Akron · Canton · Northeast Ohio.&nbsp;&nbsp;<strong style="color: var(--text);">Remote:</strong> Nationwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Engagement Options -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Engagement Options</h2>
+    <p class="section-sub">Pick what fits the scope. Move between tiers any time.</p>
+    <div class="compare">
+      <div class="compare-col">
+        <h3>BASIC</h3>
+        <h4>Remote support &amp; advisory</h4>
         <ul>
-          <li><span class="check">✓</span> Dedicated VPS per client</li>
-          <li><span class="check">✓</span> Dedicated GPU per client</li>
-          <li><span class="check">✓</span> Self-hosted AI — no OpenAI, no Anthropic, no external calls</li>
-          <li><span class="check">✓</span> Documents scanned by ClamAV on upload</li>
-          <li><span class="check">✓</span> Role-based access control and audit logging</li>
-          <li><span class="check">✓</span> TLS encryption in transit</li>
-          <li><span class="check">✓</span> Full-disk encryption available for production deployments</li>
+          <li><span class="mark">→</span> Remote troubleshooting</li>
+          <li><span class="mark">→</span> Network and security assessments</li>
+          <li><span class="mark">→</span> Advisory and second-opinion calls</li>
+          <li><span class="mark">→</span> Patch and config reviews</li>
+          <li><span class="mark">→</span> Documentation</li>
+        </ul>
+      </div>
+      <div class="compare-col vault">
+        <h3>PREMIUM</h3>
+        <h4>Onsite &amp; full-project execution</h4>
+        <ul>
+          <li><span class="mark">✓</span> Everything in Basic</li>
+          <li><span class="mark">✓</span> Onsite Cleveland · Akron · Canton</li>
+          <li><span class="mark">✓</span> Project implementation</li>
+          <li><span class="mark">✓</span> Cybersecurity engagements</li>
+          <li><span class="mark">✓</span> Multi-site rollouts</li>
+          <li><span class="mark">✓</span> Emergency response priority</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="local-strip">
-      <div class="flag">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-          <circle cx="12" cy="10" r="3"/>
-        </svg>
-      </div>
-      <div class="content">
-        <h3>Built in Northeast Ohio, for companies that pick up the phone</h3>
-        <p>DocVault is local. That means in-person pilots, same-day answers, and no offshore support queues, no case numbers — just a partner who knows your business.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="pilot" class="final-cta">
-  <h2>Start with a one-week pilot.</h2>
-  <p>Pick one focused use case — contract Q&amp;A, audit prep, or handbook lookup. We'll stand up your dedicated vault, load your documents, and let your team use it for a week. You'll see the privacy claim hold up in practice before signing anything.</p>
+<!-- Contact form -->
+<section id="contact" class="final-cta">
+  <h2>Request service or schedule a consultation.</h2>
+  <p>Tell me about your environment and what you need. I'll reply within one business day. For emergency support, mention it in the message and I'll prioritize.</p>
 
   <form class="pilot-form" id="pilotForm" novalidate>
     <div class="row">
@@ -534,12 +445,15 @@
       <input type="email" id="email" name="email" required autocomplete="email" />
     </div>
     <div>
-      <label for="usecase">Primary use case</label>
+      <label for="usecase">What do you need?</label>
       <select id="usecase" name="usecase" required>
         <option value="">Select one…</option>
-        <option>Contract Q&amp;A</option>
-        <option>Audit / compliance prep</option>
-        <option>Handbook &amp; SOP lookup</option>
+        <option>Network / connectivity</option>
+        <option>Cybersecurity / vulnerability assessment</option>
+        <option>Infrastructure / server / virtualization</option>
+        <option>Field services / smart hands</option>
+        <option>Emergency support</option>
+        <option>Consultation / advisory</option>
         <option>Other</option>
       </select>
     </div>
@@ -554,7 +468,7 @@
     <!-- Cloudflare Turnstile -->
     <div class="cf-turnstile" data-sitekey="0x4AAAAAAC84uax_-LjHgMcf" data-theme="dark"></div>
 
-    <button type="submit" class="btn lg" id="pilotSubmit">Request a pilot</button>
+    <button type="submit" class="btn lg" id="pilotSubmit">Request service</button>
     <div class="form-status" id="pilotStatus" role="status" aria-live="polite"></div>
   </form>
 </section>
@@ -593,7 +507,7 @@
         });
         if (!res.ok) throw new Error('bad status');
         status.className = 'form-status ok';
-        status.textContent = 'Got it — we\'ll be in touch within one business day.';
+        status.textContent = 'Got it — I\'ll be in touch within one business day.';
         form.reset();
         if (window.turnstile) window.turnstile.reset();
       } catch (err) {
@@ -602,14 +516,14 @@
         if (window.turnstile) window.turnstile.reset();
       } finally {
         btn.disabled = false;
-        btn.textContent = 'Request a pilot';
+        btn.textContent = 'Request service';
       }
     });
   })();
 </script>
 
 <footer>
-  <span class="logo">DocVault</span> · Sovereign AI for your company's documents · Built in Northeast Ohio
+  <span class="logo">DocVault</span> · On-Demand IT Services · Northeast Ohio · Remote Nationwide
 </footer>
 
 </body>
