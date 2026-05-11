@@ -22,10 +22,19 @@ interface ContactPayload {
 const MAX = { name: 120, company: 120, email: 254, usecase: 80, message: 2000 };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// _headers / api/* doesn't reach Pages Function responses, so apply the
+// security headers explicitly on every Response built here.
+const RESP_HEADERS: HeadersInit = {
+  "content-type": "application/json",
+  "cache-control": "no-store",
+  "access-control-allow-origin": "https://docvault.tech",
+  "x-content-type-options": "nosniff",
+};
+
 function bad(detail: string, status = 400): Response {
   return new Response(JSON.stringify({ detail }), {
     status,
-    headers: { "content-type": "application/json" },
+    headers: RESP_HEADERS,
   });
 }
 
@@ -48,7 +57,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   // Honeypot — silently 200, no further work.
   if (payload.website && payload.website.length > 0) {
     return new Response(JSON.stringify({ ok: true }), {
-      headers: { "content-type": "application/json" },
+      headers: RESP_HEADERS,
     });
   }
 
@@ -125,6 +134,6 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (!send.ok) return bad("Could not send message", 502);
 
   return new Response(JSON.stringify({ ok: true }), {
-    headers: { "content-type": "application/json" },
+    headers: RESP_HEADERS,
   });
 };
